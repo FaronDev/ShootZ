@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			font-family: 'Roboto', Arial, Helvetica, sans-serif;
+		}
+
+		body {
+			height: 100vh;
+			width: 100%;
+			background-color: black;
+		}
+
+		#score {
+			position: absolute;
+			margin-top: 6px;
+			margin-left: 4px;
+			font-size: 30px;
+			color: white;
+			user-select: none;
+		}
+
+		#endBox {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			height: 50vh;
+			width: 40vw;
+			background: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5vh;
+			flex-direction: column;
+		}
+
+		#finalScore {
+			font-size: 5em;
+		}
+
+		#scoreLabel {
+			font-size: 2em;
+			margin-bottom: 1em;
+		}
+
+		#startBtn {
+			height: 25%;
+			width: 80%;
+			border-radius: 2em;
+			border: none;
+			font-size: 1.5em;
+			color: white;
+			background: rgb(0,50,255)
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div id='score'>Score: <span id='scoreEl'>0</span></div>
+	<div id='endBox'>
+		<div id='finalScore'>0</div>
+		<label id='scoreLabel'>Score</label>
+		<button id='startBtn'>Start Game</button>
+	</div>
+	<canvas></canvas>
+</body>
+<script src="/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+</html>
