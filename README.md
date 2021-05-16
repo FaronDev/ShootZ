@@ -1,2 +1,2 @@
 # ShootZ
-A Shooter game. 
+A really simple shooter game. 
