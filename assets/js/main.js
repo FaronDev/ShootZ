@@ -113,6 +113,7 @@ let particles = []
 const bulletSpeed = 7
 let restarts = 0
 let enemySpeed = 100
+let bulletDelay = 500
 
 function spawnEnemy() {
     setInterval(() => {
@@ -227,15 +228,17 @@ function init() {
     finalScoreEl.innerHTML = score
 }
 
-addEventListener('click', (event) => {
+addEventListener('mousedown', (event) => {
     angle = Math.atan2(event.clientY - playerY, event.clientX - playerX)
     const velocity = {
         x: Math.cos(angle) * bulletSpeed,
         y: Math.sin(angle) * bulletSpeed
     }
     
-    projectiles.push(new Projectile(playerX, playerY, 10, 'white', velocity))
+    projectiles.push(new Projectile(playerX, playerY, 10, 'white', velocity))   
 })
+
+screen.orientation.lock()
 
 startBtn.addEventListener('click', () => {
     init()

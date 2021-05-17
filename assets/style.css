@@ -9,6 +9,10 @@ body {
     background-color: black;
 }
 
+canvas {
+    touch-action: manipulation;
+}
+
 #score {
     position: absolute;
     margin-top: 6px;
