@@ -1,21 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Game</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/secondary.css">
+    <title>ShootZ - Single Player 2D Game</title>
 </head>
 <body>
-	<div id='score'>Score: <span id='scoreEl'>0</span></div>
-	<div id='endBox'>
-		<div id='finalScore'>0</div>
-		<label id='scoreLabel'>Score</label>
-		<button id='startBtn'>Start Game</button>
-	</div>
-	<canvas></canvas>
+    <div class="loadingScreen">
+        <h1>Loading...</h1>
+    </div>
+    <label id="scoreLabel">Score: <span id="scoreSpan">0</span></label>
+    <div id="startUI">
+        <div class="container">
+            <div class="top">
+                <h1>ShootZ</h1>
+                <label>A Single Player 2D Game</label>
+            </div>
+            <div class="center">
+                <div class="inputs">
+                    <div id="inputColorDiv">
+                        <input type="color" id="inputColor">
+                    </div>
+                    <input type="text" placeholder="Nick" id="inputName">
+                </div>
+                <label id='needNickLabel'>Enter any nickname</label>
+                <button id="startBtn">START</button>
+            </div>
+            <div class="bottom">
+                <label class='instructions'>Use WASD keys to move and left-click to shoot at the enemies</label>
+            </div>
+        </div>
+        <div class="external">
+            <div class="bottom">
+                <button><i class="fab fa-google"></i></button>
+                <button><i class="fab fa-facebook-f"></i></button>
+                <button><i class="fab fa-instagram"></i></button>
+                <button><i class="fab fa-github"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="deathUI">
+        <div class="container">
+            <div class="Etop">
+                <label id="finalScoreLabel">0</label>
+                <label>SCORE</label>
+            </div>
+            <label class='highscoreLabelClass'><span id='nameSpan'>Your</span>'s highscore: <span id='highscoreLabel'>0</span></label>
+            <button id='mainmenuBtn'>Main Menu</button>
+        </div>
+    </div>
+    <div id="mobileCover">
+        <div class="container">
+            <h1>This game is not playable in mobile devices. Open this site through your laptop or desktop.</h1>
+        </div>
+    </div>
+    <canvas></canvas>
+    <div id='info'>i</div>
 </body>
-<script type="text/javascript" src="assets/js/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js" integrity="sha512-70OZ+iUuudMmd7ikkUWcEogIw/+MIE17z17bboHhj56voxuy+OPB71GWef47xDEt5+MxFdrigC1tRDmuvIVrCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://kit.fontawesome.com/4bf21d861d.js" crossorigin="anonymous"></script>
+
+<script src="assets/js/game_objects.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/main.js"></script>
 </html>

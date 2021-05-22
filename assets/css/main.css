@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#scoreLabel {
+    display: none;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    color: white;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+#startUI {
+    display: none;
+    position: absolute;
+}
+
+#startUI .container{
+    height: 60vh;
+    width: 50vh;
+}
+
+.container {
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5vh;
+}
+
+.container .top {
+    user-select: none;
+}
+
+.container .top h1 {
+    font-size: 5rem;
+}
+
+.container .top label {
+    font-size: 1.5rem;
+}
+
+.container .center {
+    width: 80%;
+}
+
+.inputs {
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+#inputName {
+    height: 2rem;
+    width: 85%;
+    border-radius: 1rem ;
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+}
+
+#inputColor {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+#inputColorDiv {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    border: 2px solid black;
+}
+
+#needNickLabel {
+    display: none;
+    color: red;
+}
+
+#startBtn {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 1.25rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.container .bottom {
+    width: 80%;
+}
+
+#startUI .external {
+    height: 10vh;
+    width: 50vh;
+    margin-top: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5vh;
+}
+
+.external button {
+    height: 5vh;
+    width: 5vh;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.external button :hover{
+    transform: scale(1.25);
+}
+
+#deathUI {
+    display: none;
+    position: absolute;
+}
+
+#deathUI .container {
+    height: 40vh;
+    min-width: 50vh;
+}
+
+#deathUI .container .Etop {
+    display: flex;
+    flex-direction: column;
+}
+
+#finalScoreLabel {
+    margin-top: 1rem;
+    font-size: 4rem;
+}
+
+.Etop label {
+    font-size: 2rem;
+}
+
+.container .highscoreLabelClass {
+    font-size: 1.25rem;
+}
+
+#mainmenuBtn {
+    height: 3.5rem;
+    width: 80%;
+    border-radius: 1.75rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#mobileCover {
+    height: 100vh;
+    width: 100%;
+    display: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mobileCover .container{
+    width: 80%;
+    padding: 5%;
+}
+
+#mobileCover .container h1 {
+    word-wrap: break-word;
+}
