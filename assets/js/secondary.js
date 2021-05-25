@@ -1,0 +1,2 @@
+getElementsByClassName('infoDiv')
+

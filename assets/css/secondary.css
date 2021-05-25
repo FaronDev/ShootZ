@@ -1,9 +1,6 @@
 .loadingScreen {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    top: 0; bottom: 0; right: 0; left: 0;
     height: 100vh;
     background-color: white;
     display: flex;
@@ -18,25 +15,75 @@
     font-size: 2rem;
 }
 
-#info {
+.info {
     position: absolute;
     height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    bottom: 10px;
-    right: 10px;
-    padding-top: 3px;
-    color: white;
-    background-color: rgb(0, 110, 255);
-    font-weight: 700;
-    font-style: italic;
+    bottom: 5px;
+    right: 7px;
     user-select: none;
+    font-family: monospace;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.2)
 }
 
-#info ::after {
-    content: 'Hi';
-    background-color: green;
-    top: 0; bottom: 0; right: 0; left: 0;
-    height: 100%;
-    border-radius: 10px;
+#settingsUI {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.settingsContainer {
+    height: 70vh;
+    width: 60%;
+    background-color: white;
+    border-radius: 2.5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.settingsContainer .head {
+    height: 5vh;
+    width: 98%;
+    background-color: rgb(225,225,225);
+    margin: 1vh;
+    border-radius: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settingsContainer .settingsArea {
+    height: 64vh;
+    width: 98%;
+    background-color: rgb(225,225,225);
+    margin: 0 1vh 1vh 1vh;
+    border-radius: 2.5vh;
+}
+
+.settingsArea .tabs {
+    height: 10%;
+    width: 100%;
+    border-radius: 2.5vh 2.5vh 0 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.settingsArea .tab {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(200,200,200);
+    border-radius: inherit;
+    text-align: center;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+

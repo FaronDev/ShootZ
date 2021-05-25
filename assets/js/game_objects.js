@@ -105,7 +105,9 @@ class Particle {
     update(index){
 
         if (this.opacity <= 0){
-            particles.splice(index, 1)
+            setTimeout(() => {
+                particles.splice(index, 1)
+            }, 0)
             return 0
         }
 
