@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+canvas {
+    z-index: 4;
+}
+
+#inGameUI {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    z-index: 5;
+    user-select: none;
+}
+
+.ammoUI {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.UIcontainer {
+    height: 75px;
+    padding: 10px;
+    background-color: rgb(25,25,25);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.seperator {
+    height: 100%;
+    width: .5rem;
+    margin: 0 5px;
+    background-color: rgb(15,15,15);
+}
+
+.txt {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 4rem;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.ammoIcon {
+    height: 55px;
+    width: 55px;
+    margin-left: 5px;
+    background-image: url(/assets/imgs/bullets.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.centering-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="assets/imgs/favicon.png">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/game.css">
     <link rel="stylesheet" href="assets/css/secondary.css">
     <title>ShootZ - Single Player 2D Game</title>
 </head>
 <body>
     <div class="loadingScreen">
-        <h1>Loading</h1>
+        <h1>Loading...</h1>
     </div>
     <label id="scoreLabel">0</label>
+    <div class="labelsDiv">
+        <label class="labels Lbullets">0</label>
+        <label class="labels Lenemies">0</label>
+        <label class="labels Lparticles">0</label>
+        <label class="labels Lhealth">0</label>
+    </div>
     <div id="startUI">
         <div class="container">
             <div class="top">
                 <h1>ShootZ</h1>
-                <label>A Single Player 2D Game. Alpha V0.2</label>
+                <label>A Single Player 2D Game <br><em>UNSTABLE-ALPHA</em> V3.0</label>
             </div>
             <div class="center">
                 <div class="inputs">
@@ -31,7 +38,7 @@
                 <button id="startBtn">START</button>
             </div>
             <div class="bottom">
-                <label class='instructions'>Use WASD keys to move and left-click to shoot at the enemies</label>
+                <label class='instructions'>Use WASD keys to move and hold left-click to shoot at the enemies<br> R - Reload <br> X - Autoshoot <br> Filled with bugs. Dont judge</label>
             </div>
         </div>
         <div class="external">
@@ -55,11 +62,27 @@
     </div>
     <div id="mobileCover">
         <div class="container">
-            <h1>This game is not playable in mobile devices. Open this site through your laptop or desktop.</h1>
+            <h1>This game is not playable on mobile devices. Open this site through your laptop or desktop.</h1>
+        </div>
+    </div>
+    <div id="inGameUI">
+        <div class="popup"></div>
+        <progress id='health' value='100' max='100'></progress>
+        <div class="ammoUI">
+            <div class="UIcontainer">
+                <div class="centering-div">
+                    <div id="currentAmmo" class="txt">30</div>
+                </div>
+                <div class="seperator"></div>
+                <div class="centering-div">
+                    <div id="totalAmmo" class="txt">30</div>
+                </div>
+                <div class="ammoIcon"></div>
+            </div>
         </div>
     </div>
     <canvas></canvas>
-    <div class="info">Made by Hari</div>
+    <div class="info">Made by Hari with ♥</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.20/ua-parser.min.js" integrity="sha512-70OZ+iUuudMmd7ikkUWcEogIw/+MIE17z17bboHhj56voxuy+OPB71GWef47xDEt5+MxFdrigC1tRDmuvIVrCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
